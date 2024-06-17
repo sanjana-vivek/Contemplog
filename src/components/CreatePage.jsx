@@ -24,14 +24,14 @@ function CreatePage() {
         <br />
         <br />
         <h2 className="heading-1">Collect your thoughts</h2>
-        <textarea rows={20} cols={140}></textarea>
+        <textarea rows={20} cols={140} placeholder="Write your blog here..."></textarea>
       </section>
-      <br/>
+      <br />
       <section className="upload-image-button">
-          <Button onClick={()=>navigate("/")}>Create</Button>
+        <Button onClick={() => navigate("/")}>Create</Button>
       </section>
-      <br/>
-      <br/>
+      <br />
+      <br />
     </>
   );
 }
