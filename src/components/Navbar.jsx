@@ -31,7 +31,7 @@ function Navbar() {
       </section>
       {showCreateButton && (
         <section className="create-post-button">
-          <Button onClick={handleCreatePostClick}>Create Post</Button>
+          <Button onClick={handleCreatePostClick}>Create New Post</Button>
         </section>
       )}
     </div>
