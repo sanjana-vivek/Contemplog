@@ -12,8 +12,7 @@ function Navbar() {
   const navigate = useNavigate();
   return (
     <>
-    <div className="navbar">
-    <section>
+    <section className="navbar">
         <Link to="/">
           <Logo />
         </Link>
@@ -21,7 +20,6 @@ function Navbar() {
       <section className="create-post-button">
         <Button onClick={() => navigate("/create")}>Create Post</Button>
       </section>
-    </div>
     </>
   );
 }
