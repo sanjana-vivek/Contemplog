@@ -20,6 +20,7 @@ function CreatePage() {
     posts.push(post);
     localStorage.setItem("posts", JSON.stringify(posts));
     navigate("/");
+    alert("New post has been updated")
   }
 
   return (
