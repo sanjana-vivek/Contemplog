@@ -1,11 +1,13 @@
 .heading-1{
     text-align: center;
     color: rgb(6,57,112);
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .heading-2{
     text-align: center;
     color: white;
+    font-family: sans-serif;
 }
 
 .upload-image-button {

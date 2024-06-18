@@ -13,6 +13,8 @@ function HomePage() {
   return (
     <>
       <Navbar />
+      <h1 className="heading-1">Where thoughts take shape</h1>
+      <br/>
       <div className="home-page">
         {posts.length === 0 ? (
           <p>No posts yet. Click "Create New Post" to add your first post!</p>
