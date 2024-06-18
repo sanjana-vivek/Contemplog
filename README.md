@@ -1,6 +1,9 @@
 
 # Contemplog
 
+![Blog app logo](https://github.com/sanjana-vivek/Contemplog/assets/126575036/fdea36d4-09da-4b58-8072-f1816c5fb75f)
+
+
 Contemplog is a simple blogging web application that allows users to create and view blog posts. Each post can include an image and text content. The application is built using React for the frontend and Node.js with Express for the backend, and it uses MongoDB to store posts.
 
 ## Table of Contents
