@@ -1,18 +1,25 @@
 .heading-1{
     text-align: center;
+    color: rgb(6,57,112);
+}
+
+.heading-2{
+    text-align: center;
+    color: white;
 }
 
 .upload-image-button {
     background-color: white;
-    color: black;
+    color: rgb(6,57,112);
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
+    border-color: rgb(6,57,112);
   }
 
 .section-1{
     padding: 10px 0px 30px;
-    background-color: rgba(0, 0, 0, 0.58);
+    background-color: rgb(6,57,112);
     color: white;
 }
 

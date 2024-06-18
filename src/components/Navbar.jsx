@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "antd";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import blogLogo from "../assets/contemplog-logo-white-no-bg.svg";
+import blogLogo from "../assets/contemplog-logo-black-no-bg.svg";
 import "./Navbar.css";
 
 function Logo() {

@@ -29,7 +29,7 @@ function CreatePage() {
       <h1 className="heading-1">Upload an image and enter your thoughts</h1>
       <br />
       <section className="section-1">
-        <h2 className="heading-1">Add your Image</h2>
+        <h2 className="heading-2">Add your Image</h2>
         <br />
         <input type="file" onChange={handleChange} />
         <br />
@@ -37,7 +37,7 @@ function CreatePage() {
         {file && <img className="image" src={file} alt="Selected" />}
         <br />
         <br />
-        <h2 className="heading-1">Collect your thoughts</h2>
+        <h2 className="heading-2">Collect your thoughts</h2>
         <textarea
           rows={20}
           cols={140}
