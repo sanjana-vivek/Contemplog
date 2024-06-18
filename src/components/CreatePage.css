@@ -15,3 +15,10 @@
     background-color: rgba(0, 0, 0, 0.58);
     color: white;
 }
+
+.image{
+    max-width: 500px;
+    max-height: 500px; 
+    display: block;
+    margin: 0 auto;
+}

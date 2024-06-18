@@ -22,6 +22,9 @@ function CreatePage() {
         <br />
         <input type="file" onChange={handleChange} />
         <br />
+        <br/>
+        {file && <img className="image" src={file} alt="Selected" />}
+        <br/>
         <br />
         <h2 className="heading-1">Collect your thoughts</h2>
         <textarea rows={20} cols={140} placeholder="Write your blog here..."></textarea>
