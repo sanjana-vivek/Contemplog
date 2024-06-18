@@ -1,5 +1,4 @@
 
-# Contemplog
 
 ![Blog app logo](https://github.com/sanjana-vivek/Contemplog/assets/126575036/fdea36d4-09da-4b58-8072-f1816c5fb75f)
 
