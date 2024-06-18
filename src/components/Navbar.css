@@ -2,8 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px 0px 80px;
-    background-color: white;
+    padding: 0px 30px 0px 30px;
+    background-color: rgb(6, 57, 112);
   }
   
   .navbar section {
@@ -11,9 +11,10 @@
     align-items: center;
   }
   
+  /*
   .create-post-button {
     background-color: rgb(255, 255, 255);
-    color: rgb(6,57,112);
+    color: rgb(0, 0, 0);
     padding: 10px 80px;
     text-decoration: none;
     border-radius: 5px;
@@ -21,4 +22,4 @@
     border-color: rgb(6,57,112);
   }
 
-  
+  */

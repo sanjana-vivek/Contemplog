@@ -4,7 +4,7 @@ import { Navbar } from "./Navbar";
 import "./Navbar.css";
 import "./CreatePage.css";
 import { useState } from "react";
-import axios from 'axios';
+import axios from "axios";
 
 function CreatePage() {
   const navigate = useNavigate();
@@ -17,19 +17,19 @@ function CreatePage() {
 
   async function handleCreate() {
     const formData = new FormData();
-    formData.append('image', file);
-    formData.append('content', content);
+    formData.append("image", file);
+    formData.append("content", content);
 
     try {
-      await axios.post('http://localhost:5000/api/posts', formData, {
+      await axios.post("http://localhost:5000/api/posts", formData, {
         headers: {
-          'Content-Type': 'multipart/form-data'
-        }
+          "Content-Type": "multipart/form-data",
+        },
       });
       navigate("/");
       alert("New post has been updated");
     } catch (error) {
-      console.error('Error creating post', error);
+      console.error("Error creating post", error);
     }
   }
 
@@ -44,7 +44,13 @@ function CreatePage() {
         <input type="file" onChange={handleChange} />
         <br />
         <br />
-        {file && <img className="image" src={URL.createObjectURL(file)} alt="Selected" />}
+        {file && (
+          <img
+            className="image"
+            src={URL.createObjectURL(file)}
+            alt="Selected"
+          />
+        )}
         <br />
         <br />
         <h2 className="heading-2">Collect your thoughts</h2>
@@ -55,13 +61,12 @@ function CreatePage() {
           value={content}
           onChange={(e) => setContent(e.target.value)}
         ></textarea>
-      </section>
-      <br />
-      <section className="upload-image-button">
+        <br />
+        <br />
         <Button onClick={handleCreate}>Create</Button>
+        <br />
+        <br />
       </section>
-      <br />
-      <br />
     </>
   );
 }

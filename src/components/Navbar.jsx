@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "antd";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import blogLogo from "../assets/contemplog-logo-black-no-bg.svg";
+import blogLogo from "../assets/Blog-app-logo.png";
 import "./Navbar.css";
 
 function Logo() {
-  return <img src={blogLogo} alt="Contemplog Logo" width={250} height={150} />;
+  return <img src={blogLogo} alt="Contemplog Logo" width={280} height={80} />;
 }
 
 function Navbar() {

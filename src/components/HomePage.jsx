@@ -22,6 +22,7 @@ function HomePage() {
   return (
     <>
       <Navbar />
+      <br/>
       <h1 className="heading-1">Where thoughts take shape</h1>
       <br/>
       <div className="home-page">

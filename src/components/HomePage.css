@@ -2,29 +2,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  background-color: rgb(6, 57, 112);
-  color: white;
 }
 
 .post {
-  background-color: white;
-  color: rgb(6,57,112) ;
-  padding: 20px;
-  margin-bottom: 20px;
+  background-color: rgba(158, 205, 255, 0.483);
+  color: rgb(6,57,112);
+  padding: 20px 20px 20px 20px;
+  margin-bottom: 50px;
   border-radius: 5px;
   width: 80%;
-  text-align: center;
+  text-align: justify;
   font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .post-image {
   max-width: 100%;
   max-height: 500px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.heading-1{
+.heading-1 {
   text-align: center;
   color: rgb(6,57,112);
   font-family: 'Courier New', Courier, monospace;
