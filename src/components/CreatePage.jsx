@@ -4,6 +4,7 @@ import { Navbar } from "./Navbar";
 import "./Navbar.css";
 import "./CreatePage.css";
 import { useState } from "react";
+import axios from 'axios';
 
 function CreatePage() {
   const navigate = useNavigate();
@@ -11,16 +12,25 @@ function CreatePage() {
   const [content, setContent] = useState("");
 
   function handleChange(e) {
-    setFile(URL.createObjectURL(e.target.files[0]));
+    setFile(e.target.files[0]);
   }
 
-  function handleCreate() {
-    const post = { image: file, content };
-    const posts = JSON.parse(localStorage.getItem("posts")) || [];
-    posts.push(post);
-    localStorage.setItem("posts", JSON.stringify(posts));
-    navigate("/");
-    alert("New post has been updated")
+  async function handleCreate() {
+    const formData = new FormData();
+    formData.append('image', file);
+    formData.append('content', content);
+
+    try {
+      await axios.post('http://localhost:5000/api/posts', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
+      navigate("/");
+      alert("New post has been updated");
+    } catch (error) {
+      console.error('Error creating post', error);
+    }
   }
 
   return (
@@ -34,7 +44,7 @@ function CreatePage() {
         <input type="file" onChange={handleChange} />
         <br />
         <br />
-        {file && <img className="image" src={file} alt="Selected" />}
+        {file && <img className="image" src={URL.createObjectURL(file)} alt="Selected" />}
         <br />
         <br />
         <h2 className="heading-2">Collect your thoughts</h2>

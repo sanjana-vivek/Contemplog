@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from 'axios';
 import { Navbar } from "./Navbar";
 import "./HomePage.css";
 
@@ -6,8 +7,16 @@ function HomePage() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    const savedPosts = JSON.parse(localStorage.getItem("posts")) || [];
-    setPosts(savedPosts);
+    const fetchPosts = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/posts');
+        setPosts(response.data);
+      } catch (error) {
+        console.error('Error fetching posts', error);
+      }
+    };
+
+    fetchPosts();
   }, []);
 
   return (
@@ -21,7 +30,7 @@ function HomePage() {
         ) : (
           posts.map((post, index) => (
             <div key={index} className="post">
-              {post.image && <img className="post-image" src={post.image} alt="Post" />}
+              {post.image && <img className="post-image" src={`http://localhost:5000${post.image}`} alt="Post" />}
               <p>{post.content}</p>
             </div>
           ))
