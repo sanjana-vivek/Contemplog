@@ -1,19 +1,23 @@
-import { Button } from "antd";
+import { Button, Upload } from "antd";
 import { useNavigate } from "react-router-dom";
 import { Navbar } from "./Navbar";
 import "./Navbar.css";
 import "./CreatePage.css";
 import { useState } from "react";
 import axios from "axios";
+import { UploadOutlined } from '@ant-design/icons';
 
 function CreatePage() {
   const navigate = useNavigate();
   const [file, setFile] = useState(null);
   const [content, setContent] = useState("");
 
-  function handleChange(e) {
-    setFile(e.target.files[0]);
-  }
+  const handleChange = info => {
+    const file = info.fileList[0];
+    if (file) {
+      setFile(file.originFileObj);
+    }
+  };
 
   async function handleCreate() {
     const formData = new FormData();
@@ -41,7 +45,13 @@ function CreatePage() {
       <section className="section-1">
         <h2 className="heading-2">Add your Image</h2>
         <br />
-        <input type="file" onChange={handleChange} />
+        <Upload
+          listType="picture"
+          beforeUpload={() => false} // Prevent automatic upload
+          onChange={handleChange}
+        >
+          <Button icon={<UploadOutlined />}>Upload</Button>
+        </Upload>
         <br />
         <br />
         {file && (
@@ -63,7 +73,7 @@ function CreatePage() {
         ></textarea>
         <br />
         <br />
-        <Button onClick={handleCreate}>Create</Button>
+        <Button type="primary" onClick={handleCreate}>Create</Button>
         <br />
         <br />
       </section>
