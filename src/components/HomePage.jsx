@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import { Navbar } from "./Navbar";
+import { Card } from 'antd';
 import "./HomePage.css";
 
 function HomePage() {
@@ -21,7 +21,6 @@ function HomePage() {
 
   return (
     <>
-      <Navbar />
       <br/>
       <h1 className="heading-1">Where thoughts take shape</h1>
       <br/>
@@ -30,10 +29,10 @@ function HomePage() {
           <p>No posts yet. Click "Create New Post" to add your first post!</p>
         ) : (
           posts.map((post, index) => (
-            <div key={index} className="post">
+            <Card key={index} className="post-card" title="Post" bordered={false}>
               {post.image && <img className="post-image" src={`http://localhost:5000${post.image}`} alt="Post" />}
-              <p>{post.content}</p>
-            </div>
+              <p className="post-content">{post.content}</p>
+            </Card>
           ))
         )}
       </div>

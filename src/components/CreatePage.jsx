@@ -1,7 +1,5 @@
-import { Button, Upload } from "antd";
+import { Button, Upload, Input } from "antd";
 import { useNavigate } from "react-router-dom";
-import { Navbar } from "./Navbar";
-import "./Navbar.css";
 import "./CreatePage.css";
 import { useState } from "react";
 import axios from "axios";
@@ -39,7 +37,6 @@ function CreatePage() {
 
   return (
     <>
-      <Navbar />
       <h1 className="heading-1">Upload an image and enter your thoughts</h1>
       <br />
       <section className="section-1">
@@ -64,13 +61,13 @@ function CreatePage() {
         <br />
         <br />
         <h2 className="heading-2">Collect your thoughts</h2>
-        <textarea
+        <Input.TextArea
+          className="custom-textarea"
           rows={20}
-          cols={140}
           placeholder="Write your blog here..."
           value={content}
           onChange={(e) => setContent(e.target.value)}
-        ></textarea>
+        />
         <br />
         <br />
         <Button type="primary" onClick={handleCreate}>Create</Button>

@@ -8,11 +8,10 @@ const Layout = ({ children }) => {
     <>
       <Navbar />
       <div className="layout-content">
-        {children}
+        <Outlet/>
       </div>
     </>
   );
 }
-<Outlet/>
 
 export default Layout;

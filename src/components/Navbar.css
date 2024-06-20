@@ -10,16 +10,9 @@
     display: flex;
     align-items: center;
   }
-  
-  /*
-  .create-post-button {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    padding: 10px 80px;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: right;
-    border-color: rgb(6,57,112);
-  }
 
-  */
+  .logo{
+    width: 280px;
+    height: 80px;
+  }
+  

@@ -5,7 +5,7 @@ import blogLogo from "../assets/Blog-app-logo.png";
 import "./Navbar.css";
 
 function Logo() {
-  return <img src={blogLogo} alt="Contemplog Logo" width={280} height={80} />;
+  return <img src={blogLogo} alt="Contemplog Logo" width={190} height={50} />;
 }
 
 function Navbar() {
@@ -24,7 +24,7 @@ function Navbar() {
 
   return (
     <div className="navbar">
-      <section>
+      <section className="logo">
         <Link to="/">
           <Logo />
         </Link>

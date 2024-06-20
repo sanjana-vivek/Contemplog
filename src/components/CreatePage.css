@@ -1,36 +1,33 @@
-.heading-1{
+.heading-1 {
     text-align: center;
-    color: rgb(6,57,112);
+    color: rgb(6, 57, 112);
     font-family: 'Courier New', Courier, monospace;
 }
 
-.heading-2{
+.heading-2 {
     text-align: center;
-    color: rgb(6,57,112);
+    color: rgb(6, 57, 112);
     font-family: sans-serif;
 }
 
-/*
-.upload-image-button {
-    background-color: white;
-    color: rgb(6,57,112);
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    border-color: rgb(6,57,112);
-  }
-*/
-.section-1{
-    padding: 10px 0px 30px;
+.section-1 {
+    padding: 10px 20px 30px; /* Added padding on left and right */
     margin-left: 12px;
     margin-right: 12px;
     border-radius: 5px;
     background-color: rgba(158, 205, 255, 0.483);
 }
 
-.image{
+.image {
     max-width: 500px;
-    max-height: 500px; 
+    max-height: 500px;
     display: block;
     margin: 0 auto;
+}
+
+.custom-textarea {
+    margin: 20px 0; /* Top and bottom margin, no left/right margin */
+    padding: 10px;
+    width: calc(100% - 40px); /* Ensuring it fits within the section with padding */
+    border-radius: 5px;
 }
