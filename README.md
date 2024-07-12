@@ -79,6 +79,14 @@ Contemplog is a simple blogging web application that allows users to create and 
 
 - Navigate to the home page to see all the posts displayed.
 
+### Video Recording 
+
+
+
+https://github.com/user-attachments/assets/3e09d31b-16fb-4d93-8baa-d0f68389d02c
+
+
+
 ## Directory Structure
 
 ```bash
